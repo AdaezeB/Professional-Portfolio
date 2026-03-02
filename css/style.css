@@ -147,6 +147,10 @@ nav a:hover {
 .hero-text {
       text-align: left;
 }
+.hero-text ul{
+        list-style: none;
+
+}
 
 
 
@@ -206,12 +210,12 @@ h1 {
     background: #ebebeb;
 }
 
-footer {
+section {
 
   padding-top: 2cm;
   
 }
-footer h2{
+section h2{
 
   color: rgb(83, 2, 88);
   font-size: 15px;
@@ -219,12 +223,12 @@ footer h2{
   text-transform: uppercase;
 }
 
-footer ul {
+section ul {
 
     display: flex;
     list-style: none;
     gap: 5px;
-    padding: 3cm;
+    padding: 5cm;
     
 
 }
