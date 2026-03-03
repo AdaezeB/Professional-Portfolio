@@ -152,8 +152,6 @@ nav a:hover {
 
 }
 
-
-
 h1 {
 
     color: rgb(83, 2, 88); 
@@ -177,7 +175,15 @@ h1 {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+button {
+    display: inline;
+    border-radius: 30%;
+    border-color: rgb(255, 0, 217);
+    background-color: rgb(196, 156, 198);
+    height: 50px;
+    width: 80px;
+    
+}
 .section-label {
     font-size: 15px;
     text-transform: uppercase;
