@@ -1,62 +1,10 @@
-/*@font-face {
+@font-face {
     font-family: 'BilderbergItalic';
-    src: url('fonts\bilderberg.italic.otf') format('opentype');
+    src: url('../fonts/bilderberg.italic.otf') format('opentype');
     font-weight: bold;
     font-style: italic;
 }
 
-body {
-  background-color: rgb(157, 139, 157);
-  border-radius: 5dvb;
-  border-color: blueviolet;
-  border-style: double;
-  scroll-behavior: smooth;
-  
-  
-}
-
-h1 {
-  display: flex;
-  font-family: 'BilderbergItalic', sans-serif; 
-  font-size: 50px;
-  color: rgb(83, 2, 88); 
-  opacity: 0.7; 
-  text-align: left;
- 
-}
-h2[id = role]{
-  color: rgb(83, 2, 88); 
-  font-size: 20px;
-  opacity: 0.5;
-  gap: 1cm;
-}
-.nameAndTitle{
-
-  text-align: center;
-  gap: 5cm;
-}
-h2 {
-    display: flex;
-    font-family: 'BilderbergItalic', sans-serif;
-    color: rgb(83, 2, 88);
-    opacity: 0.7; 
-    margin: auto;
-}
-
-nav{
-  display: flex;
-  top: 0;
-  align-items: center;
-  z-index: 1000 ;
-
-}
-nav a{
-
-
-}
-section[id = "about"] {
-       background-color: rgb(196, 69, 196);
-}*/
 
 /* GLOBAL SETTINGS */
 * {
@@ -67,12 +15,14 @@ section[id = "about"] {
 
 body {
     background-color: rgb(157, 139, 157); /* Clean white background */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #1a1a1a;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
-
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
 /* NAVIGATION */
 nav {
     display: flex;
