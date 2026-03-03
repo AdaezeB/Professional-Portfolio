@@ -26,7 +26,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px; 
+    padding: 30px; 
     position: fixed;
     width: 100%;
     background: rgb(157, 139, 157);
@@ -38,7 +38,7 @@ nav {
     color: rgb(83, 2, 88);
     font-weight: bold;
     letter-spacing: 3px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-shadow: 0 4px 10px rgba(75, 46, 89, 0.4);
 }
 
@@ -47,6 +47,7 @@ nav ul {
     list-style: none;
     gap: 40px;
     padding-left: 30px;
+    
     
 }
 
@@ -73,7 +74,7 @@ nav a:hover {
     gap: 30px;
     max-width: 1200px;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 135px;
     background-color: rgb(157, 139, 157); /* Soft grey instead of purple */
   
 }
