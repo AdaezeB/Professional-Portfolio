@@ -105,7 +105,8 @@ nav a:hover {
 
 #intro {
     font-size: 20px;
-     color: rgb(83, 2, 88); 
+    letter-spacing: 2px;
+    color: rgb(83, 2, 88); 
     opacity: 0.7; 
     padding-left: 20px;
 
@@ -130,9 +131,11 @@ h1 {
     text-shadow: #260438;
     
 }
-#button {
-    padding: 10px 20px;
-
+.hero-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+    padding-left: 20px;
 }
 
 button  {
@@ -145,17 +148,13 @@ button  {
     font-weight: 600;
     color: white;  
     padding: 14px 28px;
-    gap: 50px;
-     box-shadow: 0 6px 0 #260438,       /* bottom edge */
-        0 8px 15px rgba(0,0,0,0.2);  /*soft outer shadow */
-
-     transition: all 0.15s ease; 
-     background: linear-gradient(
-        to bottom,
-        #702189,
-        rgb(102, 7, 107)
-    );
+    cursor: pointer;
+    box-shadow: 0 6px 0 #260438,       /* bottom edge */
+                0 8px 15px rgba(0,0,0,0.2);  /*soft outer shadow */
+    transition: all 0.15s ease; 
+    background: linear-gradient(to bottom, #702189, rgb(102, 7, 107) );
 }
+
 button:hover {
     filter: brightness(1.2);
     transition: filter 0.5s ease-in-out;
@@ -170,7 +169,7 @@ button:hover {
 
 /* CONTENT SECTIONS */
 .container {
-    padding: 120px 60px;
+    padding: 80px 60px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -207,7 +206,60 @@ button:hover {
     background: #ebebeb;
 }
 
-section {
+/* CONTACT SECTION & FORM */
+.contact-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 300px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+
+.contact-form button {
+    align-self: flex-start; /* Keeps the button from stretching */
+}
+
+.socials {
+    flex: 1;
+    min-width: 200px;
+}
+
+.socials ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0; /* Removed the problematic 5cm padding */
+}
+
+.socials img {
+    width: 45px; /* Scaled down slightly for neatness */
+    height: 45px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s;
+}
+
+.socials img:hover {
+    transform: translateY(-3px);
+}
+/* section {
 
   padding-top: 2cm;
   
@@ -236,14 +288,14 @@ section ul {
     font-weight: bold;
 }
 
-.Socials img{
+.socials img{
 
     width: 60px;
     height: 60px;
     object-fit: contain;
     mix-blend-mode: multiply;
     
-}
+} */
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
