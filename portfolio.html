@@ -23,11 +23,10 @@
         <p id="intro"> Hi, I'm </p>
         <h1>BLESSING MUOGHALU</h1>
         <h2 id="role">SOFTWARE DEVELOPER</h2>
-          <ul id="button">
-            <li><button>CV</button></li>
-            <li><button>Get in touch</button></li>
-
-          </ul>
+          <div class="hero-buttons">
+            <button>CV</button>
+            <button>Get in touch</button>
+        </div>
       </div>
 
         <div class="hero-image">
@@ -48,24 +47,35 @@
             <div class="card">
                 <h3>C++ Development</h3>
                 <p>Advanced algorithmic efficiency and system-level programming.</p>
-            </div>
-            
+            </div>      
         </div>
-        <section id="contact">
-                <h2>Contact me</h2>
+    </section>
+    <section id="contact" class="container">
+                <h2 class="section-label">Contact me</h2>
+
+            <div class="contact-layout">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Full Name and Surname" required>
+                        <input type="email" placeholder="e.g. someone@gmail.com" required>
+                        <textarea placeholder="Your Messages" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+
                 <div class="Socials">
+                    <p class="socials-title" >Let's Connect</p>
                   <ul>
                     <li><a href="https://www.linkedin.com/in/blessing-muoghalu-6160211b1/" target="_blank" title="Linkedin Profile"><img src="images/linkedin_logo.png" alt="Linkedin logo"></a></li>
                     <li><a href="https://github.com/AdaezeB" target="_blank" title="Github Profile"><img src="images/github_logo.png" alt="Github logo"></a></li>
 
                   </ul>
                 </div>
-
-
-        </footer>
-      
+            </div>
     </section>
 </main>
+
+<footer style="text-align: center; padding: 20px; color: rgb(83, 2, 88); font-size: 14px;">
+    <p>&copy; 2026 Blessing Muoghalu. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
