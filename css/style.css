@@ -225,17 +225,42 @@ button:hover {
 .contact-form input, 
 .contact-form textarea {
     padding: 15px;
-    border: none;
+    border: 1px solid rgba(83, 2, 88, 0.2);
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    background-color: #f4f4f4;
+    background-color: rgb(255, 255, 240);
+    color: #260438;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: rgb(83, 2, 88);
+    box-shadow: 0 4px 12px rgba(83, 2, 88, 0.15); 
 }
 
 .contact-form button {
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(to bottom, #702189, rgb(102, 7, 107));
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(255, 255, 240);  
+    padding: 14px 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    transition: all 0.2s ease;
     align-self: flex-start; /* Keeps the button from stretching */
 }
 
+.contact-form button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
 .socials {
     flex: 1;
     min-width: 200px;
@@ -334,7 +359,7 @@ img {
     h1 { font-size: 2rem; }
     #role { font-size: 16px; letter-spacing: 3px; }
     
-    /* Make buttons full width for easier tapping */
+
     .hero-buttons { 
         flex-direction: column; 
         width: 100%; 
