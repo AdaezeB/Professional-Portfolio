@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'BilderbergItalic';
-    src: url('../fonts/bilderberg.italic.otf') format('opentype');
-    font-weight: bold;
-    font-style: italic;
-}
-
 
 /* GLOBAL SETTINGS */
 * {
@@ -194,56 +187,85 @@ button:hover {
     gap: 30px;
 }
 
-.card {
-    flex: 3;
-    background: #f4f4f4;
+.project-card {
+    flex: auto;
+    background: #f4e8f8;
     padding: 40px;
     border-radius: 10px; /* Subtle radius for modern look */
     transition: background 0.4s;
 }
 
-.card:hover {
+.project-card:hover {
     background: #ebebeb;
 }
 
 /* CONTACT SECTION & FORM */
-.contact-layout {
+.contact-card {
     display: flex;
-    justify-content: space-between;
+    background-color: #f4e8f8;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Deep shadow for depth */
+    border: 1px solid rgba(83, 2, 88, 0.15); /* Subtle purple border */
+    padding: 50px;
     gap: 40px;
-    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
 }
 
-#contact-form {
-    flex: 2;
+.contact-info-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form-container {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    min-width: 300px;
 }
 
-#contact-form input, 
-#contact-form textarea {
-    padding: 15px;
-    border: 1px solid rgba(83, 2, 88, 0.2);
-    border-radius: 8px;
+/* Grey, Pill-Shaped Inputs */
+.contact-form-container input, 
+.contact-form-container textarea {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px; /* Makes the edges completely round */
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    background-color: rgb(255, 255, 240);
+    font-size: 15px;
+    background-color: #f4f4f4; 
     color: #260438;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
-#contact-form input:focus, 
-#contact-form textarea:focus {
+/* Textarea needs slightly less rounding so it doesn't look odd */
+.contact-form-container textarea {
+    border-radius: 20px; 
+}
+
+/* Inner shadow when typing */
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
     outline: none;
-    border-color: rgb(83, 2, 88);
-    box-shadow: 0 4px 12px rgba(83, 2, 88, 0.15); 
+    background-color: #ebebeb;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); 
 }
 
-#contact-form button {
-    border-radius: 20px;
+/* The Send Button */
+.contact-form-container button {
+   border-radius: 20px;
     border: none;
     background: linear-gradient(to bottom, #702189, rgb(102, 7, 107));
     background-color: rgb(105, 5, 110);
@@ -254,13 +276,13 @@ button:hover {
     padding: 14px 28px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-    transition: all 0.2s ease;
-    align-self: flex-start; /* Keeps the button from stretching */
+    transition: all 0.2s ease; 
+    /* align-self: flex-start; */
 }
 
-#contact-form button:hover {
+.contact-form-container button:hover {
     filter: brightness(1.2);
-    transform: translateY(-2px);
+    transform: translateY(-2px); 
 }
 .socials {
     flex: 1;
@@ -270,12 +292,12 @@ button:hover {
 .socials ul {
     display: flex;
     list-style: none;
-    gap: 15px;
-    padding: 0; /* Removed the problematic 5cm padding */
-}
+    gap: 15px; 
+     padding: 0; /* Removed the problematic 5cm padding */
+} 
 
 .socials img {
-    width: 45px; /* Scaled down slightly for neatness */
+    width: 45px; /*Scaled down slightly for neatness */
     height: 45px;
     object-fit: contain;
     mix-blend-mode: multiply;
@@ -352,7 +374,12 @@ img {
 
     /* Stack grids and layouts */
     .project-grid { flex-direction: column; }
-    .contact-layout { flex-direction: column; gap: 40px; }
+    /* .contact-layout { flex-direction: column; gap: 40px; } */
+    .contact-card {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+    }
 }
 
 /* 3. SMALL MOBILE PHONES (Max Width: 480px) */
