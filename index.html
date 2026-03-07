@@ -77,10 +77,10 @@
 
         <div class="contact-form-container">
             <h3 style="margin-bottom: 20px; color: #260438; font-size: 24px;">Get in touch</h3>
-            <form id="contact-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
+            <form id="contact-form" action="https://formspree.io/f/mojkvewj" method="post">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email"  name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" rows="5" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
