@@ -180,19 +180,43 @@ button:hover {
     line-height: 1.4;
     max-width: 900px;
 }
+/* The main wrapper that splits the screen */
+.projects-layout {
+    display: grid;
+    /* This means the left column gets 1 fraction of space, the right gets 2 fractions */
+    grid-template-columns: 1fr 2fr; 
+    gap: 50px;
+    align-items: center; /* Vertically centers the animation with the cards */
+    margin-top: 40px;
+}
 
 /* PROJECTS GRID */
 .project-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* slightly narrower cards to fit */
     gap: 30px;
+}
+/* Center the animation inside its column */
+.projects-animation {
+    display: flex;
+    justify-content: center;
 }
 
 .project-card {
-    flex: auto;
-    background: #f4e8f8;
-    padding: 40px;
-    border-radius: 10px; /* Subtle radius for modern look */
-    transition: background 0.4s;
+   background-color: #ffffff; 
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #eeeeee;
+    
+    /* --- NEW RULES FOR ANIMATION --- */
+    opacity: 0; /* Start completely invisible */
+    transform: translateY(40px); /* Start pushed down by 40px */
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+/* The trigger class JavaScript will add to reveal them */
+.project-card.show-card {
+    opacity: 1;
+    transform: translateY(0); /* Puts it back in its normal position */
 }
 
 .project-card:hover {
@@ -360,6 +384,18 @@ img {
     .hero-image img {
         width: 250px;
         height: 250px;
+    }
+}
+
+/* When the screen gets smaller than a tablet, stack everything! */
+@media (max-width: 900px) {
+    .projects-layout {
+        grid-template-columns: 1fr; /* Changes from 2 columns to 1 column */
+        text-align: center;
+    }
+    
+    .projects-animation {
+        margin-bottom: 40px; /* Adds breathing room below the animation when stacked */
     }
 }
 

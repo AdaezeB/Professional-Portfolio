@@ -62,3 +62,56 @@ if (form) {
         }
     });
 }
+
+// --- Scroll-Triggered Animation (Intersection Observer) ---
+
+// --- Scroll-Triggered Animation (Continuous Repeat) ---
+
+const projectAnim = document.getElementById('projects-anim');
+const projectsSection = document.getElementById('projects');
+const projectCards = document.querySelectorAll('.project-card'); 
+
+if (projectsSection) {
+    const observerOptions = {
+        root: null, 
+        threshold: 0.2 // Triggers when 20% of the section is visible
+    };
+
+    const projectObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            
+            // 1. If the section comes INTO view...
+            if (entry.isIntersecting) {
+                
+                // Play the Lottie animation
+                if (projectAnim) {
+                    projectAnim.play();
+                }
+                
+                // Loop through the cards and fade them in one by one
+                projectCards.forEach(function(card, index) {
+                    setTimeout(function() {
+                        card.classList.add('show-card');
+                    }, index * 200); 
+                });
+                
+                
+            } 
+            // 2. If the section goes OUT OF view...
+            else {
+                
+                // Reset the Lottie animation back to frame 0
+                if (projectAnim) {
+                    projectAnim.stop(); 
+                }
+                
+                // Hide all the cards instantly so they can fade in next time
+                projectCards.forEach(function(card) {
+                    card.classList.remove('show-card');
+                });
+            }
+        });
+    }, observerOptions);
+
+    projectObserver.observe(projectsSection);
+}
