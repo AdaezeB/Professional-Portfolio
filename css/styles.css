@@ -202,6 +202,11 @@ button:hover {
     justify-content: center;
 }
 
+#projects-anim {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+}
 .project-card {
    background-color: #f4e8f8; 
     border-radius: 12px;
@@ -224,6 +229,13 @@ button:hover {
 }
 
 /* CONTACT SECTION & FORM */
+
+#contact-anim {
+    width: 250px;
+    height: 250px;
+
+}
+
 .contact-card {
     display: flex;
     background-color: #f4e8f8;
@@ -247,6 +259,13 @@ button:hover {
 .contact-image img {
     max-width: 100%;
     height: auto;
+}
+
+.contact-form-container h3 {
+    color: #260438;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .contact-form-container {
@@ -311,13 +330,16 @@ button:hover {
 .socials {
     flex: 1;
     min-width: 200px;
+    text-align: center; 
+    margin-top: 20px;
 }
 
 .socials ul {
     display: flex;
     list-style: none;
     gap: 15px; 
-     padding: 0; /* Removed the problematic 5cm padding */
+    padding: 0; 
+    justify-content: center;
 } 
 
 .socials img {

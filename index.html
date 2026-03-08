@@ -43,6 +43,31 @@
         <p class="bio">I am currently enrolled in the Java Skills Programme at Mecer Inter-Ed, where I am further developing my programming and software development skills. I bridge the gap between complex mathematical theory and practical code.</p>
     </section>
 
+    <section id="resume" class="container">
+        <h2 class="section-label">Education & Experience</h2>
+        <div class="resume-layout">
+            
+            <div class="resume-column">
+                <h3 style="color: rgb(83, 2, 88); margin-bottom: 20px;">Education</h3>
+                <div class="resume-item">
+                    <span class="resume-date">2020 - 2025</span>
+                    <h4>BSc Mathematical Science in Computer Science and Mathematics</h4>
+                    <p>University of Johannesburg (UJ)</p>
+                </div>
+            </div>
+
+            <div class="resume-column">
+                <h3 style="color: rgb(83, 2, 88); margin-bottom: 20px;">Experience</h3>
+                <div class="resume-item">
+                    <span class="resume-date">2026 - Present</span>
+                    <h4>Java Skills Programme</h4>
+                    <p>Mecer Inter-Ed</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section id="projects" class="container">
         <h2 class="section-label">My Projects</h2>
         <div class="projects-layout">
@@ -52,9 +77,8 @@
                     id="projects-anim"
                     src="images/build-anim.json" 
                     background="transparent"  
-                    speed="1"  
-                    style="width: 100%; max-width: 400px; height: auto;">
-                </lottie-player>  
+                    speed="1">
+                </lottie-player>
                    
             </div>
 
@@ -80,18 +104,18 @@
         <div class="contact-info-side">
             <div class="contact-image">
                 <lottie-player 
+                    id="contact-anim"
                     src="images/mail-anim.json" 
                     background="transparent"  
-                    speed="1"  
-                    style="width: 250px; height: 250px;"  
+                    speed="1"    
                     loop  
                     autoplay>
     </lottie-player>
             </div>
             
-            <div class="socials" style="text-align: center; margin-top: 20px;">
+            <div class="socials" >
                 <p class="socials-title">Let's Connect</p>
-                <ul style="justify-content: center;">
+                <ul>
                     <li><a href="https://www.linkedin.com/in/blessing-muoghalu-6160211b1/" target="_blank"><img src="images/linkedin_logo.png" alt="Linkedin"></a></li>
                     <li><a href="https://github.com/AdaezeB" target="_blank"><img src="images/github_logo.png" alt="Github"></a></li>
                 </ul>
@@ -99,7 +123,7 @@
         </div>
 
         <div class="contact-form-container">
-            <h3 style="margin-bottom: 20px; color: #260438; font-size: 24px;">Get in touch</h3>
+            <h3>Get in touch</h3>
             <form id="contact-form" action="https://formspree.io/f/mojkvewj" method="post">
                 <input type="text" name="name" placeholder="Full Name" required>
                 <input type="email"  name="email" placeholder="Email" required>
