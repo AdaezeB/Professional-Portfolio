@@ -26,7 +26,13 @@ if (form) {
     form.addEventListener('submit', async function(event) {
         // 1. Stop the browser from redirecting to the Formspree page
         event.preventDefault(); 
-        
+        const emailInput = form.querySelector('input[name="email"]').value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Checks for format: text@text.text
+    
+        if (!emailRegex.test(emailInput)) {
+            alert("Please enter a valid email address.");
+            return; // Stops the function immediately, preventing submission
+        }
         // 2. Package up all the data the user typed in
         const data = new FormData(event.target);
         
