@@ -38,7 +38,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 30px;
     padding-left: 30px;
     
     
@@ -176,7 +176,7 @@ button:hover {
 }
 
 .bio {
-    font-size: 2rem;
+    font-size: 1.4rem;
     line-height: 1.4;
     max-width: 900px;
 }
@@ -203,20 +203,88 @@ button:hover {
 }
 
 #projects-anim {
-    width: 100%; 
-    max-width: 400px; 
+    width: 80%; 
+    max-width: 300px; 
     height: auto;
 }
 .project-card {
    background-color: #f4e8f8; 
     border-radius: 12px;
     padding: 25px;
-    border: 1px solid #eeeeee;
-    
-    /* --- NEW RULES FOR ANIMATION --- */
+    border: 2px solid #eeeeee;
     opacity: 0; /* Start completely invisible */
     transform: translateY(40px); /* Start pushed down by 40px */
     transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+.essay-preview {
+    background-color: #ffffff;
+    border: 1px solid rgba(83, 2, 88, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    height: 200px; /* This locks the height and forces the scrollbar */
+    overflow-y: auto; /* Adds the vertical scrollbar */
+    font-size: 0.9rem;
+    color: #444;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); /* Deepens the box slightly */
+}
+
+.essay-preview p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Customizing the scrollbar so it looks sleek and purple */
+.essay-preview::-webkit-scrollbar {
+    width: 6px;
+}
+.essay-preview::-webkit-scrollbar-thumb {
+    background-color: rgb(83, 2, 88);
+    border-radius: 10px;
+}
+
+/* --- DOWNLOAD BUTTON --- */
+.btn-download {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #702189, rgb(102, 7, 107));
+    color: rgb(255, 255, 240);
+    padding: 14px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-download:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+.tech-stack {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows the badges to wrap to the next line on small screens */
+    justify-content: center;
+}
+
+.tech-stack span {
+    background-color: rgba(83, 2, 88, 0.1); /* A soft, transparent background  */
+    color: rgb(83, 2, 88);
+    padding: 5px 12px;
+    border-radius: 20px; /* Gives them that modern "pill" shape */
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(83, 2, 88, 0.2); /* A very subtle border for crispness */
+    transition: background-color 0.3s ease;
+}
+.tech-stack span:hover {
+    background-color: rgba(83, 2, 88, 0.2); 
 }
 /* The trigger class JavaScript will add to reveal them */
 .project-card.show-card {
@@ -250,8 +318,8 @@ button:hover {
     color: rgb(255, 255, 240);
     padding: 5px 15px;
     border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
+    font-size: 0.80rem;
+    font-weight: 400;
     margin-bottom: 12px;
 }
 
@@ -435,6 +503,13 @@ img {
     .container { padding: 80px 40px; }
     .hero-content { gap: 20px; }
     
+    .logo { 
+        font-size: 1rem; 
+        letter-spacing: 1px; 
+    }
+    nav ul { 
+        gap: 15px; 
+    }
     /* Shrink the hero image slightly for tablets */
     .hero-image img {
         width: 250px;
@@ -475,8 +550,12 @@ img {
         text-align: center; 
         padding-top: 140px; /* Account for the taller stacked nav */
     }
-    .hero-text { text-align: center; }
-    #intro { padding-left: 0; }
+    .hero-text {
+         text-align: center; 
+    }
+    #intro {
+         padding-left: 0; 
+    }
     
     /* Center the buttons */
     .hero-buttons { 
@@ -488,13 +567,21 @@ img {
         display: flex; 
     }
     /* Adjust spacing and fonts for mobile */
-    .container { padding: 60px 25px; }
-    .bio { font-size: 1.3rem; }
-    h1 { font-size: 2.5rem; }
+    .container { 
+        padding: 60px 25px; 
+    }
+    .bio { 
+        font-size: 1.3rem;
+    }
+    h1 { 
+        font-size: 2.5rem;
+     }
 
     /* Stack grids and layouts */
-    .project-grid { flex-direction: column; }
-    /* .contact-layout { flex-direction: column; gap: 40px; } */
+    .project-grid { 
+        flex-direction: column; 
+    }
+
     .contact-card {
         flex-direction: column;
         padding: 30px 20px;

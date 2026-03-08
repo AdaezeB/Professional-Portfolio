@@ -1,6 +1,5 @@
-// --- Navigation Buttons Logic ---
 
-// 1. Get in Touch Button
+//  Get in Touch Button
 const contactBtn = document.getElementById('contact-btn');
 if (contactBtn) {
     contactBtn.addEventListener('click', function() {
@@ -9,7 +8,7 @@ if (contactBtn) {
     });
 }
 
-// 2. CV Button
+//  CV Button
 const cvBtn = document.getElementById('cv-btn');
 if (cvBtn) {
     cvBtn.addEventListener('click', function() {
@@ -24,7 +23,7 @@ const form = document.getElementById('contact-form');
 
 if (form) {
     form.addEventListener('submit', async function(event) {
-        // 1. Stop the browser from redirecting to the Formspree page
+        //  Stop the browser from redirecting to the Formspree page
         event.preventDefault(); 
         const emailInput = form.querySelector('input[name="email"]').value;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Checks for format: text@text.text
@@ -33,11 +32,11 @@ if (form) {
             alert("Please enter a valid email address.");
             return; // Stops the function immediately, preventing submission
         }
-        // 2. Package up all the data the user typed in
+        //  Package up all the data the user typed in
         const data = new FormData(event.target);
         
         try {
-            // 3. Send the data to Formspree secretly in the background
+            //  Send the data to Formspree secretly in the background
             const response = await fetch(event.target.action, {
                 method: form.method,
                 body: data,
@@ -46,7 +45,7 @@ if (form) {
                 }
             });
             
-           // 4. If it successfully sent:
+           //  If it successfully sent:
             if (response.ok) {
                 // Grab the toast element
                 const toast = document.getElementById("toast");
@@ -69,10 +68,7 @@ if (form) {
     });
 }
 
-// --- Scroll-Triggered Animation (Intersection Observer) ---
-
-// --- Scroll-Triggered Animation (Continuous Repeat) ---
-
+// Scroll-Triggered Animation (Intersection Observer) 
 const projectAnim = document.getElementById('projects-anim');
 const projectsSection = document.getElementById('projects');
 const projectCards = document.querySelectorAll('.project-card'); 
@@ -86,7 +82,7 @@ if (projectsSection) {
     const projectObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             
-            // 1. If the section comes INTO view...
+            //  If the section comes INTO view...
             if (entry.isIntersecting) {
                 
                 // Play the Lottie animation
@@ -103,7 +99,7 @@ if (projectsSection) {
                 
                 
             } 
-            // 2. If the section goes OUT OF view...
+            //  If the section goes OUT OF view...
             else {
                 
                 // Reset the Lottie animation back to frame 0
