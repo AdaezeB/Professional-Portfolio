@@ -350,6 +350,29 @@ button:hover {
     align-items: center;
 }
 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    
+}
+.contact-info h3 {
+    color: #260438;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.contact-info a {
+    color: rgb(83, 2, 88);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.contact-info a:hover {
+    color: rgb(139, 9, 146);
+}
+
 .contact-info-side {
     flex: 1;
     display: flex;
